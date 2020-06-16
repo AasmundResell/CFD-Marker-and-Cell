@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -11,22 +11,22 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\appendVTFfile.cpp" />
     <ClCompile Include="src\calAvg.cpp" />
     <ClCompile Include="src\calForce.cpp" />
     <ClCompile Include="src\calVel.cpp" />
-    <ClCompile Include="src\cavitybox.cpp" />
-    <ClCompile Include="src\cavity_box_BC.cpp" />
-    <ClCompile Include="src\field_calculate.cpp" />
+    <ClCompile Include="src\cavityBoxBC.cpp" />
+    <ClCompile Include="src\calculateFlowField.cpp" />
     <ClCompile Include="src\flowAroundSquareBC.cpp" />
-    <ClCompile Include="src\flowOverPlateBC.cpp" />
+    <ClCompile Include="src\flowAroundVPlateBC.cpp" />
     <ClCompile Include="src\interpolate.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\make_VTF_file.cpp" />
+    <ClCompile Include="src\makeVTFfile.cpp" />
     <ClCompile Include="src\piter.cpp" />
-    <ClCompile Include="src\situations.cpp" />
+    <ClCompile Include="src\chooseFlowCase.cpp" />
     <ClCompile Include="src\stability.cpp" />
-    <ClCompile Include="src\stream_function.cpp" />
-    <ClCompile Include="src\write_VTF_results.cpp" />
+    <ClCompile Include="src\calStreamFunction.cpp" />
+    <ClCompile Include="src\writeVTFresults.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\header.h" />

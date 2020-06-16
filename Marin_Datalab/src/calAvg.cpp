@@ -1,6 +1,6 @@
 #include "header.h"
 
-void calculate_average(const Field& V, Field_Val &U)
+void calculateAverage(const Field& V, Field_Val &U)
 {
 for (int i = 0; i < n; i++)
     {

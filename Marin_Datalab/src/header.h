@@ -5,8 +5,11 @@
 #include <stdlib.h>
 #include <math.h>
 #include <iomanip> 
+#include <time.h>
+#include <algorithm>
+#include <vector>
 
-#define n 30
+#define n 50
 
 #define IX(x, y) ((x) + (y)*(n+2))
 #define JX(x, y) ((x) + (y)*(n))
@@ -40,21 +43,21 @@ void cavityBoxBC(Field &V);
 
 void flowAroundSquareBC(Field &V);
 
-void flowOverPlateBC(Field &V);
+void flowAroundVPlateBC(Field &V);
 
 void piter(double h, double dt, double beta, double epsi, Field &V,int &iflag, double* div);
 
-void calculate_average(const Field& V, Field_Val& U);
+void calculateAverage(const Field& V, Field_Val& U);
 
-void streamfunction(const Field& V, Field_Val& U, double h);
+void streamFunction(const Field& V, Field_Val& U, double h);
 
 int choice();
 
-void make_VTF_files(std::ofstream &file, std::ofstream &pFile, std::ofstream &psiFile, std::ofstream &vFile);
+void makeVTFfiles(std::ofstream &file, std::ofstream &pFile, std::ofstream &psiFile, std::ofstream &vFile);
 
-void write_results(Field_Val F, std::ofstream &file, std::ofstream &pFile, std::ofstream &psiFile, std::ofstream &vFile, int step);
+void writeResults(Field_Val F, std::ofstream &file, std::ofstream &pFile, std::ofstream &psiFile, std::ofstream &vFile, int step);
 
-void append_VTF_steps(std::ofstream &file,  std::ofstream &pFile, std::ofstream &psiFile, std::ofstream &vFile);
+void appendVTFsteps(std::ofstream &file,  std::ofstream &pFile, std::ofstream &psiFile, std::ofstream &vFile);
 
-void calculateForce(int situation, const Field& V, std::ofstream &fFile);
+void calculateForce(int situation, const Field& V, std::ofstream &dFile, std::ofstream& lFile);
 

@@ -1,7 +1,7 @@
 #include "header.h"
 
-void piter(double h, double dt,
- double beta, double epsi, Field &V, int &iflag, double* div)
+void piter(double h, double dt,double beta,
+   double epsi, Field &V, int &iflag, double* div)
 {
     double delp;
     iflag = 0;

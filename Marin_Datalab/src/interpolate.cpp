@@ -1,17 +1,8 @@
 #include "header.h"
-#include <algorithm>
-
-/*
-the SOR subroutine gives different weights to the Gauss-Seidel and the previous iterate
-//Its purpose is to change the iterate during calculations to increase the computational time
-Omega has to be bigger than one to speed up the convergence, thus the name over relaxation
-*/
-
-
-//Linear interpolation to find the omega parameter
 
 double interpolate()
 {
+    //Linear interpolation to find the omega parameter
 
     const int size = 9;
     int nn[9] = {0, 5, 10, 20, 30, 40, 60, 100, 500};
@@ -25,7 +16,6 @@ double interpolate()
 
     omega = oo[pos+1] +  static_cast<int>((double)n-nn[pos+1])*(oo[pos]-oo[pos+1])/((double)nn[pos]-(double)nn[pos+1]);
     std::cout << "Omega: " << omega  <<std::endl;
-
 
     return omega;
 }
